@@ -1,0 +1,25 @@
+DATABASE_HOSTNAME: "localhost"
+DATABASE_NAME: "driver_manager_development"
+DATABASE_USERNAME: "root"
+DATABASE_PASSWORD: "judoda09"
+MYSQL_POOL: "20"
+
+# DATABASE_HOSTNAME: "171.244.21.85"
+# DATABASE_NAME: "driver_manager_staging"
+# DATABASE_USERNAME: "thuytt"
+# DATABASE_PASSWORD: "bap123123"
+# MYSQL_POOL: "20"
+
+SECRET_KEY_BASE: "secret_key_development"
+SECRET_KEY_BASE_PRODUCTION: "secret_key_production"
+
+CREDENTIALS: "CREDENTIALS"
+
+#mailer
+SMTP_ADDRESS: "smtp.gmail.com"
+SMTP_PORT: "587"
+SMTP_AUTHENTICATION: "plain"
+SMTP_DOMAIN: "gmail.com"
+EMAIL_USERNAME: "email_address"
+EMAIL_PASSWORD: "password_email"
+HOST: "localhost:3000"

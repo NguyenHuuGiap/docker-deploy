@@ -1,0 +1,29 @@
+# docker-compse.yml
+version: "3.3"
+
+services:
+  app:
+    build: ./docker/app/
+    volumes:
+      - .:/app/base
+    environment:
+      DATABASE_HOSTNAME: 'db'
+      DATABASE_USERNAME: 'postgres'
+      DATABASE_PASSWORD: 'toor'
+      DATABASE_NAME: 'case_master'
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'toor'
+  web:    
+    build: ./docker/web/
+    depends_on:      
+      - app    
+    ports:      
+      - 8080:80
